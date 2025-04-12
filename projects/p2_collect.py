@@ -11,17 +11,6 @@ for file in os.listdir('headlines-html'):
 
     soup = BeautifulSoup(html_doc, "html.parser")
 
-    # t = soup.select_one("h2.card-title, h3.card-title")
-
-    # title = t
-
-    # l = soup.find("a", href = True)
-    # link = l['href'] if l else "N/A"
-
-
-    # data['link'].append(link)
-    # data['title'].append(title)
-
     headlines = soup.find_all(['h2', 'h3'], class_="card-title")
 
     for tag in headlines:
